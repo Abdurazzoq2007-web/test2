@@ -1,0 +1,12 @@
+import wave
+audio = wave.open("test_audio.wav","rb")
+channels = audio.getnchannels()
+sample_width = audio.getsampwidth()
+frequency = audio.getframerate()
+num_of_frames = audio.getnframes()
+samples = audio.readframes(num_of_frames)
+print(len(samples))
+print("Channels:", channels)
+print("Sample width:", sample_width)
+print("Frequency:", frequency)
+print("Number of frames:", num_of_frames)
